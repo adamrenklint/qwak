@@ -3,7 +3,7 @@
 
 {{package.description}}
 
-{{>badges/gitter}} {{>badges/npm-version}} {{>badges/github-stars}} {{>badges/codeclimate-score}} {{>badges/codeclimate-coverage}}
+{{>badges/gitter}} {{>badges/npm-version}} {{>badges/github-stars}} {{>badges/travis}} {{>badges/npm-dependencies}} {{>badges/codeclimate-score}} {{>badges/codeclimate-coverage}}
 
 ## Concepts
 

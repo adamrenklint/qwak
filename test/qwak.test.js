@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = chai.expect;
-var qwak = require('../index');
+var qwak = require('../lib/qwak');
 
 describe('qwak', function () {
 
