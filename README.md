@@ -6,6 +6,8 @@ Definition and parser for qwak, a simple but expressive minimal ascii dialect fo
 [![Join the chat at https://gitter.im/adamrenklint/qwak](https://img.shields.io/badge/GITTER-join_chat-blue.svg?style=flat-square)](https://gitter.im/adamrenklint/qwak)
  [![npm version](https://img.shields.io/npm/v/qwak.svg?style=flat-square)](https://www.npmjs.com/package/qwak) 
  [![GitHub stars](https://img.shields.io/github/stars/adamrenklint/qwak.svg?style=flat-square)](https://github.com/adamrenklint/qwak/stargazers)
+ [![Code Climate score](https://img.shields.io/codeclimate/github/adamrenklint/qwak.svg?style=flat-square)](https://codeclimate.com/github/adamrenklint/qwak)
+ [![Code Climate coverage](https://img.shields.io/codeclimate/coverage/github/adamrenklint/qwak.svg?style=flat-square)](https://codeclimate.com/github/adamrenklint/qwak)
 
 
 ## Concepts
@@ -70,4 +72,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Wednesday August 12th, 2015 - 8:40:21 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Wednesday August 12th, 2015 - 9:01:27 PM*

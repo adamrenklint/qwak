@@ -4,14 +4,23 @@
   "private": true,
   "description": "Definition and parser for qwak, a simple but expressive minimal ascii dialect for programming step-based web audio event sequences",
   "main": "dist/qwak.js",
+  "config": {
+    "coverageLimit": 90,
+    "codeclimateCoverageId": "d4ba8502cdc942a86ceb1edbd1f545bdb486972d146acfa2a4e81f6bec40f5e0"
+  },
   "scripts": {
     "test": "multi='mocha-osx-reporter=- dot=-' mocha --compilers js:babel/register -s 10 test/*.test.js --reporter mocha-multi",
     "test:watch": "npm test -- -w",
     "build": "babel lib --out-dir dist",
     "tag": "git tag 'v'$npm_package_version && git push --tags",
     "docs": "redok",
-    "prepublish": "npm test && npm run build && npm run docs",
-    "postpublish": "npm run tag"
+    "prepublish": "npm test && npm run coverage:check && npm run build && npm run docs",
+    "postpublish": "npm run tag && npm run coverage:report",
+    "coverage": "babel-istanbul cover _mocha -- test/**/*.test.js -R dot",
+    "precoverage:check": "npm run coverage",
+    "coverage:check": "babel-istanbul check-coverage --statement $npm_package_config_coverageLimit --branch $npm_package_config_coverageLimit --function $npm_package_config_coverageLimit",
+    "precoverage:report": "npm run coverage",
+    "coverage:report": "CODECLIMATE_REPO_TOKEN=$npm_package_config_codeclimateCoverageId codeclimate-test-reporter < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -25,7 +34,9 @@
   "homepage": "https://github.com/adamrenklint/qwak",
   "devDependencies": {
     "babel": "^5.8.20",
+    "babel-istanbul": "^0.2.10",
     "chai": "^3.2.0",
+    "codeclimate-test-reporter": "^0.1.0",
     "mocha": "^2.2.5",
     "mocha-multi": "^0.7.1",
     "mocha-osx-reporter": "^0.1.2"
