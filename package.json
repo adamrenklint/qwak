@@ -1,7 +1,6 @@
 {
   "name": "qwak",
   "version": "0.1.0",
-  "private": true,
   "description": "Definition and parser for qwak, a simple but expressive minimal ascii dialect for programming step-based web audio event sequences",
   "main": "dist/qwak.js",
   "config": {
@@ -14,7 +13,7 @@
     "build": "babel lib --out-dir dist",
     "tag": "git tag 'v'$npm_package_version && git push --tags",
     "docs": "redok",
-    "prepublish": "npm test && npm run coverage:check && npm run build && npm run docs",
+    "prepublish": "npm test && npm run coverage:check && npm run build",
     "postpublish": "npm run tag && npm run coverage:report",
     "coverage": "babel-istanbul cover _mocha -- test/**/*.test.js -R dot",
     "precoverage:check": "npm run coverage",
