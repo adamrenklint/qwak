@@ -1,0 +1,33 @@
+{
+  "name": "qwak",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Definition and parser for qwak, a simple but expressive minimal ascii dialect for programming step-based web audio event sequences",
+  "main": "dist/qwak.js",
+  "scripts": {
+    "test": "multi='mocha-osx-reporter=- dot=-' mocha --compilers js:babel/register -s 10 test/*.test.js --reporter mocha-multi",
+    "test:watch": "npm test -- -w",
+    "build": "babel lib --out-dir dist",
+    "tag": "git tag 'v'$npm_package_version && git push --tags",
+    "docs": "redok",
+    "prepublish": "npm test && npm run build && npm run docs",
+    "postpublish": "npm run tag"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamrenklint/qwak.git"
+  },
+  "author": "Adam Renklint <adam@renklint.com> (http://adamrenklint.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamrenklint/qwak/issues"
+  },
+  "homepage": "https://github.com/adamrenklint/qwak",
+  "devDependencies": {
+    "babel": "^5.8.20",
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "mocha-multi": "^0.7.1",
+    "mocha-osx-reporter": "^0.1.2"
+  }
+}
