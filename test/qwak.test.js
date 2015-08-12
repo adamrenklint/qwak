@@ -448,5 +448,19 @@ describe('qwak', function () {
       assertNote(seq2.notes, 6, 0, '1.4.01', 'a');
       assertNote(seq2.notes, 7, 1, '1.4.49', 's');
     });
+
+    testCommand('/_--[ER_:_W?]', function (tree) {
+      var seq = tree.sequences[0];
+      assertNote(seq.notes, 0, 4, '1.1.49', 'E', { duration: 48, pitch: -24 });
+      assertNote(seq.notes, 1, 5, '1.2.01', 'R', { duration: 96, pitch: -24 });
+      assertNote(seq.notes, 2, 9, '1.4.01', 'W', { duration: 48, pitch: -24 });
+      assertNote(seq.notes, 3, 10, '1.4.49', 'W', { duration: 48, pitch: -24 });
+    });
+
+    testCommand('/qwaww(qq)se/W_:*', function (tree) {
+      it('should repeat the notes', function () {
+        expect(tree.sequences[1].notes.length).to.equal(3);
+      });
+    });
   });
 });
