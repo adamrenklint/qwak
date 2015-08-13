@@ -506,5 +506,21 @@ describe('qwak', function () {
       assertNote(seq.notes, 30, 30, '4.4.01', 'a');
       assertNote(seq.notes, 31, 31, '4.4.49', 'k');
     });
+
+    testCommand('/q_<s_*/i>ii>ii>ii>i', function (tree) {
+      var seq1 = tree.sequences[0];
+      it('should have set correct sequence length', function () {
+        expect(seq1.bars).to.equal(0.5);
+      });
+      assertNote(seq1.notes, 0, 0, '1.1.01', 'q');
+      assertNote(seq1.notes, 1, 3, '1.1.93', 's');
+      assertNote(seq1.notes, 2, 0, '1.3.01', 'q');
+      assertNote(seq1.notes, 3, 3, '1.3.93', 's');
+
+      var seq2 = tree.sequences[1];
+      it('should have set correct sequence length', function () {
+        expect(seq2.bars).to.equal(1);
+      });
+    });
   });
 });
