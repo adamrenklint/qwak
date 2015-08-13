@@ -71,7 +71,7 @@ Parses a raw qwak string into a qwak context, an object with the attributes *tem
 /90/2=foxobaxa  Use kit 2 at 90 bpm
 ```
 
-For more examples, have a look at the [extensive test suite]({{github.url}}/blob/master/test/qwak.test.md)
+For more examples, have a look at the [extensive test suite]({{github.url}}/blob/master/test/qwak.test.js)
 
 ## License
 
