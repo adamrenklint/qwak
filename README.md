@@ -12,6 +12,8 @@ Definition and parser for qwak, a simple but expressive minimal ascii dialect fo
  [![Code Climate coverage](https://img.shields.io/codeclimate/coverage/github/adamrenklint/qwak.svg?style=flat-square)](https://codeclimate.com/github/adamrenklint/qwak)
 
 
+Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired by [Typedrummer](http://typedrummer.com/) by [Kyle Stetz](http://kylestetz.com/).
+
 ## Concepts
 
 - A *session* consists of several *sequences*
@@ -78,11 +80,11 @@ Parses a raw qwak string into a qwak context, an object with the attributes *tem
 /90/2=foxobaxa  Use kit 2 at 90 bpm
 ```
 
-For more examples, have a look at the [extensive test suite](https://github.com/adamrenklint/qwak/blob/master/test/qwak.test.md)
+For more examples, have a look at the [extensive test suite](https://github.com/adamrenklint/qwak/blob/master/test/qwak.test.js)
 
 ## License
 
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Thursday August 13th, 2015 - 10:31:11 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Thursday August 13th, 2015 - 10:44:21 PM*
