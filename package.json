@@ -1,6 +1,6 @@
 {
   "name": "qwak",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Definition and parser for qwak, a simple but expressive minimal ascii dialect for programming step-based web audio event sequences",
   "main": "dist/qwak.js",
   "files": [

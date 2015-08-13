@@ -46,11 +46,22 @@ _       skip step, not blocking "note on" triggers
 >       push next note cursor forward
 ```
 
+## Install
+
+```
+$ npm install --save qwak
+```
+
 ## Usage
 
-### qwak.parse(raw:string) -> tree
+```
+var qwak = require('qwak');
+var context = qwak.parse('/qwak');
+```
 
-Parses a raw qwak string into a qwak tree, an object with the attributes *tempo:number*, *bars:number* and *sequences:array*. Each sequence contains *kit:number*, *bars:number* and *notes:array*. A note contains *key:string*, *oneshot:boolean*, *pitch:number*, *volume:number*, *pan:number* and *offset:number*.
+### qwak.parse(raw:string) -> context
+
+Parses a raw qwak string into a qwak context, an object with the attributes *tempo:number*, *bars:number* and *sequences:array*. Each sequence contains *kit:number*, *bars:number* and *notes:array*. A note contains *key:string*, *oneshot:boolean*, *pitch:number*, *volume:number*, *pan:number* and *offset:number*.
 
 ## Examples
 
