@@ -507,6 +507,14 @@ describe('qwak', function () {
       assertNote(seq.notes, 31, 31, '4.4.49', 'k');
     });
 
+    describe('/%%_*', function () {
+      it('should not throw an error', function () {
+        expect(function () {
+          qwak.parse('/%%_*');
+        }).to.not.throw(Error);
+      });
+    });
+
     testCommand('/q_<s_*/i>ii>ii>ii>i', function (tree) {
       var seq1 = tree.sequences[0];
       it('should have set correct sequence length', function () {
