@@ -5,6 +5,8 @@
 
 {{>badges/gitter}} {{>badges/npm-version}} {{>badges/github-stars}} {{>badges/travis}} {{>badges/npm-dependencies}} {{>badges/codeclimate-score}} {{>badges/codeclimate-coverage}}
 
+Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired by [Typedrummer](http://typedrummer.com/) by [Kyle Stetz](http://kylestetz.com/).
+
 ## Concepts
 
 - A *session* consists of several *sequences*
