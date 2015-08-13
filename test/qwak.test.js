@@ -462,5 +462,49 @@ describe('qwak', function () {
         expect(tree.sequences[1].notes.length).to.equal(3);
       });
     });
+
+    testCommand('/qwakqwakqwakqwakqwakqwakqwakqwak', function (tree) {
+      var seq = tree.sequences[0];
+
+      it('should have the correct length (sequence.bars)', function () {
+        expect(seq.bars).to.equal(4);
+      });
+
+      assertNote(seq.notes, 0, 0, '1.1.01', 'q');
+      assertNote(seq.notes, 1, 1, '1.1.49', 'w');
+      assertNote(seq.notes, 2, 2, '1.2.01', 'a');
+      assertNote(seq.notes, 3, 3, '1.2.49', 'k');
+      assertNote(seq.notes, 4, 4, '1.3.01', 'q');
+      assertNote(seq.notes, 5, 5, '1.3.49', 'w');
+      assertNote(seq.notes, 6, 6, '1.4.01', 'a');
+      assertNote(seq.notes, 7, 7, '1.4.49', 'k');
+
+      assertNote(seq.notes, 8, 8, '2.1.01', 'q');
+      assertNote(seq.notes, 9, 9, '2.1.49', 'w');
+      assertNote(seq.notes, 10, 10, '2.2.01', 'a');
+      assertNote(seq.notes, 11, 11, '2.2.49', 'k');
+      assertNote(seq.notes, 12, 12, '2.3.01', 'q');
+      assertNote(seq.notes, 13, 13, '2.3.49', 'w');
+      assertNote(seq.notes, 14, 14, '2.4.01', 'a');
+      assertNote(seq.notes, 15, 15, '2.4.49', 'k');
+
+      assertNote(seq.notes, 16, 16, '3.1.01', 'q');
+      assertNote(seq.notes, 17, 17, '3.1.49', 'w');
+      assertNote(seq.notes, 18, 18, '3.2.01', 'a');
+      assertNote(seq.notes, 19, 19, '3.2.49', 'k');
+      assertNote(seq.notes, 20, 20, '3.3.01', 'q');
+      assertNote(seq.notes, 21, 21, '3.3.49', 'w');
+      assertNote(seq.notes, 22, 22, '3.4.01', 'a');
+      assertNote(seq.notes, 23, 23, '3.4.49', 'k');
+
+      assertNote(seq.notes, 24, 24, '4.1.01', 'q');
+      assertNote(seq.notes, 25, 25, '4.1.49', 'w');
+      assertNote(seq.notes, 26, 26, '4.2.01', 'a');
+      assertNote(seq.notes, 27, 27, '4.2.49', 'k');
+      assertNote(seq.notes, 28, 28, '4.3.01', 'q');
+      assertNote(seq.notes, 29, 29, '4.3.49', 'w');
+      assertNote(seq.notes, 30, 30, '4.4.01', 'a');
+      assertNote(seq.notes, 31, 31, '4.4.49', 'k');
+    });
   });
 });
