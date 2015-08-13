@@ -5,6 +5,8 @@
 
 {{>badges/gitter}} {{>badges/npm-version}} {{>badges/github-stars}} {{>badges/travis}} {{>badges/npm-dependencies}} {{>badges/codeclimate-score}} {{>badges/codeclimate-coverage}}
 
+Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired by [Typedrummer](http://typedrummer.com/) by [Kyle Stetz](http://kylestetz.com/).
+
 ## Concepts
 
 - A *session* consists of several *sequences*
@@ -71,7 +73,7 @@ Parses a raw qwak string into a qwak context, an object with the attributes *tem
 /90/2=foxobaxa  Use kit 2 at 90 bpm
 ```
 
-For more examples, have a look at the [extensive test suite]({{github.url}}/blob/master/test/qwak.test.md)
+For more examples, have a look at the [extensive test suite]({{github.url}}/blob/master/test/qwak.test.js)
 
 ## License
 
