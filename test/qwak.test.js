@@ -449,6 +449,32 @@ describe('qwak', function () {
       assertNote(seq2.notes, 7, 1, '1.4.49', 's');
     });
 
+    testCommand('/foxobaxa/asd;', function (context) {
+      var seq2 = context.sequences[1];
+      assertNote(seq2.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq2.notes, 1, 1, '1.1.49', 's');
+      assertNote(seq2.notes, 2, 2, '1.2.01', 'd');
+      assertNote(seq2.notes, 3, 0, '1.3.01', 'a');
+      assertNote(seq2.notes, 4, 1, '1.3.49', 's');
+      assertNote(seq2.notes, 5, 2, '1.4.01', 'd');
+    });
+
+    testCommand('/foxobaxafoxobaxa/asdfgh;', function (context) {
+      var seq2 = context.sequences[1];
+      assertNote(seq2.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq2.notes, 1, 1, '1.1.49', 's');
+      assertNote(seq2.notes, 2, 2, '1.2.01', 'd');
+      assertNote(seq2.notes, 3, 3, '1.2.49', 'f');
+      assertNote(seq2.notes, 4, 4, '1.3.01', 'g');
+      assertNote(seq2.notes, 5, 5, '1.3.49', 'h');
+      assertNote(seq2.notes, 6, 0, '2.1.01', 'a');
+      assertNote(seq2.notes, 7, 1, '2.1.49', 's');
+      assertNote(seq2.notes, 8, 2, '2.2.01', 'd');
+      assertNote(seq2.notes, 9, 3, '2.2.49', 'f');
+      assertNote(seq2.notes, 10, 4, '2.3.01', 'g');
+      assertNote(seq2.notes, 11, 5, '2.3.49', 'h');
+    });
+
     testCommand('/_--[ER_:_W?]', function (context) {
       var seq = context.sequences[0];
       assertNote(seq.notes, 0, 4, '1.1.49', 'E', { duration: 48, pitch: -24 });

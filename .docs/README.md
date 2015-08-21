@@ -27,7 +27,8 @@ _       skip step, not blocking "note on" triggers
 !       repeat last note, including transient modifiers
 ?       repeat last note, decrease volume 25% (i.e. manual echo)
 &       layer next with previous note, i.e. jump back to previous position
-*       jump to start and repeat sequence
+*       jump to start on next step and repeat sequence
+;       jump to start on next bar and repeat sequence
 
 ## persistent modifiers
 (       increase step resolution

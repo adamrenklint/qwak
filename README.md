@@ -34,7 +34,8 @@ _       skip step, not blocking "note on" triggers
 !       repeat last note, including transient modifiers
 ?       repeat last note, decrease volume 25% (i.e. manual echo)
 &       layer next with previous note, i.e. jump back to previous position
-*       jump to start and repeat sequence
+*       jump to start on next step and repeat sequence
+;       jump to start on next bar and repeat sequence
 
 ## persistent modifiers
 (       increase step resolution
@@ -99,4 +100,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Friday August 21st, 2015 - 11:14:48 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Friday August 21st, 2015 - 11:41:21 PM*
