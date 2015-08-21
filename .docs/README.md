@@ -37,7 +37,7 @@ _       skip step, not blocking "note on" triggers
 ,       start triplet resolution (48 > 32)
 .       stop triplet resolution (32 > 48)
 
-## transient modifiers
+## simple transient modifiers
 +       pitch up next note (1/12th)
 -       pitch down next note
 %       lower volume 25% for next note
@@ -46,6 +46,18 @@ _       skip step, not blocking "note on" triggers
 }       pan next note to 25% right
 <       pull next note cursor 1/12th step (4 of 48) back
 >       push next note cursor forward
+~       shift sample starting point 0.1 seconds
+
+## granular transient modifiers
++52     pitch up next note (52/100th)
+-18     pitch down next note (18/100th)
+%33     lower volume 33% for next note
+^10     raise volume 10% for next note
+{40     pan next note to 40% left
+}60     pan next note to 60% right
+<10     pull next note cursor 10 ticks back
+>8      push next note cursor 8 ticks forward
+~350    shift sample starting point 0.35 seconds
 ```
 
 ## Install
