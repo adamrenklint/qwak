@@ -3,6 +3,7 @@
 {{#changelog version="0.2" date="2015-08-22" from="v0.1.0" to="v0.2.0"}}
 - Added sample shift modifier: ```~```
 - Added bar jump modifier: ```;```
+- Added attack and release transient fade modifiers: ```' and ` ```
 - Added granular control of transient modifiers with numeric value
 - Fixed many small bugs with parsing and interpretation
 {{/changelog}}

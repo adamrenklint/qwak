@@ -4,6 +4,7 @@
 
 - Added sample shift modifier: ```~```
 - Added bar jump modifier: ```;```
+- Added attack and release transient fade modifiers: ```' and ` ```
 - Added granular control of transient modifiers with numeric value
 - Fixed many small bugs with parsing and interpretation
 
@@ -12,4 +13,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:24:41 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:28:18 AM*
