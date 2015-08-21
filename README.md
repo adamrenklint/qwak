@@ -55,6 +55,8 @@ _       skip step, not blocking "note on" triggers
 <       pull next note cursor 1/12th step (4 of 48) back
 >       push next note cursor forward
 ~       shift sample starting point 0.1 seconds
+'       fade in next note attack in 0.1 seconds
+`       fade out next note release in 0.1 seconds
 
 ## granular transient modifiers
 +52     pitch up next note (52/100th)
@@ -66,6 +68,8 @@ _       skip step, not blocking "note on" triggers
 <10     pull next note cursor 10 ticks back
 >8      push next note cursor 8 ticks forward
 ~350    shift sample starting point 0.35 seconds
+'250    fade in next note attack in 0.25 seconds
+`800    fade out next note release in 0.8 seconds
 ```
 
 ## Install
@@ -100,4 +104,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Friday August 21st, 2015 - 11:41:21 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:00:49 AM*

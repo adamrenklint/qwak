@@ -647,5 +647,53 @@ describe('qwak', function () {
       assertNote(seq.notes, 6, 17, '1.4.15', 'g');
       assertNote(seq.notes, 7, 20, '1.4.49', 'h');
     });
+
+    testCommand("/a'bcd", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 2, '1.1.49', 'b', { attack: 0.1 });
+      assertNote(seq.notes, 2, 3, '1.2.01', 'c');
+      assertNote(seq.notes, 3, 4, '1.2.49', 'd');
+    });
+
+    testCommand("/a'250bcd", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 5, '1.1.49', 'b', { attack: 0.25 });
+      assertNote(seq.notes, 2, 6, '1.2.01', 'c');
+      assertNote(seq.notes, 3, 7, '1.2.49', 'd');
+    });
+
+    testCommand("/a'250[b'c]d", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 6, '1.1.49', 'b', { attack: 0.25 });
+      assertNote(seq.notes, 2, 8, '1.2.01', 'c', { attack: 0.35 });
+      assertNote(seq.notes, 3, 10, '1.2.49', 'd');
+    });
+
+    testCommand("/a`bcd", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 2, '1.1.49', 'b', { release: 0.1 });
+      assertNote(seq.notes, 2, 3, '1.2.01', 'c');
+      assertNote(seq.notes, 3, 4, '1.2.49', 'd');
+    });
+
+    testCommand("/a`250bcd", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 5, '1.1.49', 'b', { release: 0.25 });
+      assertNote(seq.notes, 2, 6, '1.2.01', 'c');
+      assertNote(seq.notes, 3, 7, '1.2.49', 'd');
+    });
+
+    testCommand("/a`250[b`c]d", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 6, '1.1.49', 'b', { release: 0.25 });
+      assertNote(seq.notes, 2, 8, '1.2.01', 'c', { release: 0.35 });
+      assertNote(seq.notes, 3, 10, '1.2.49', 'd');
+    });
   });
 });

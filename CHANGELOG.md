@@ -12,4 +12,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Friday August 21st, 2015 - 11:41:21 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:00:49 AM*
