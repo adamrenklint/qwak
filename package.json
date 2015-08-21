@@ -1,7 +1,7 @@
 {
   "name": "qwak",
   "version": "0.2.0",
-  "description": "Definition and parser for qwak, a simple but expressive minimal ascii dialect for programming step-based web audio event sequences",
+  "description": "Definition and parser for qwak, a simple and expressive minimal ascii dialect for programming step-based web audio event sequences",
   "main": "dist/qwak.js",
   "files": [
     "dist/*.js"
@@ -41,6 +41,7 @@
     "codeclimate-test-reporter": "^0.1.0",
     "mocha": "^2.2.5",
     "mocha-multi": "^0.7.1",
-    "mocha-osx-reporter": "^0.1.2"
+    "mocha-osx-reporter": "^0.1.2",
+    "redok": "^0.2.0"
   }
 }

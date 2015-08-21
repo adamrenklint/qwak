@@ -1,7 +1,7 @@
 qwak
 ====
 
-Definition and parser for qwak, a simple but expressive minimal ascii dialect for programming step-based web audio event sequences
+Definition and parser for qwak, a simple and expressive minimal ascii dialect for programming step-based web audio event sequences
 
 [![Join the chat at https://gitter.im/adamrenklint/qwak](https://img.shields.io/badge/GITTER-join_chat-blue.svg?style=flat-square)](https://gitter.im/adamrenklint/qwak)
  [![npm version](https://img.shields.io/npm/v/qwak.svg?style=flat-square)](https://www.npmjs.com/package/qwak) 
@@ -16,7 +16,7 @@ Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired b
 
 ## Concepts
 
-- A *session* consists of several *sequences*
+- A *session* consists of several layered *sequences*
 - A *sequence* maps to a *kit* by id
 - Steps are 48 ticks, 2/16 beats, by default
 
@@ -87,4 +87,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Thursday August 13th, 2015 - 10:44:21 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Friday August 21st, 2015 - 9:13:52 PM*
