@@ -540,5 +540,86 @@ describe('qwak', function () {
       assertNote(seq.notes, 4, 2, '1.4.01', 'R', { duration: 48 });
       assertNote(seq.notes, 5, 3, '1.4.49', 'R', { duration: 48 });
     });
+
+    testCommand('/a~bcd', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { shift: 0 });
+      assertNote(seq.notes, 1, 2, '1.1.49', 'b', { shift: 0.1 });
+      assertNote(seq.notes, 2, 3, '1.2.01', 'c', { shift: 0 });
+      assertNote(seq.notes, 3, 4, '1.2.49', 'd', { shift: 0 });
+    });
+
+    testCommand('/a~100bc~~d', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { shift: 0 });
+      assertNote(seq.notes, 1, 5, '1.1.49', 'b', { shift: 0.1 });
+      assertNote(seq.notes, 2, 6, '1.2.01', 'c', { shift: 0 });
+      assertNote(seq.notes, 3, 9, '1.2.49', 'd', { shift: 0.2 });
+    });
+
+    testCommand('/a~1000bcd', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { shift: 0 });
+      assertNote(seq.notes, 1, 6, '1.1.49', 'b', { shift: 1 });
+      assertNote(seq.notes, 2, 7, '1.2.01', 'c', { shift: 0 });
+      assertNote(seq.notes, 3, 8, '1.2.49', 'd', { shift: 0 });
+    });
+
+    testCommand('/a~1000[b~[cd]]e', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { shift: 0 });
+      assertNote(seq.notes, 1, 7, '1.1.49', 'b', { shift: 1 });
+      assertNote(seq.notes, 2, 10, '1.2.01', 'c', { shift: 1.1 });
+      assertNote(seq.notes, 3, 11, '1.2.49', 'd', { shift: 1.1 });
+      assertNote(seq.notes, 4, 14, '1.3.01', 'e', { shift: 0 });
+    });
+
+    testCommand('/a+43bc-21[de-[fg]]h', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { pitch: 0 });
+      assertNote(seq.notes, 1, 4, '1.1.49', 'b', { pitch: 43 });
+      assertNote(seq.notes, 2, 5, '1.2.01', 'c', { pitch: 0 });
+      assertNote(seq.notes, 3, 10, '1.2.49', 'd', { pitch: -21 });
+      assertNote(seq.notes, 4, 11, '1.3.01', 'e', { pitch: -21 });
+      assertNote(seq.notes, 5, 14, '1.3.49', 'f', { pitch: -33 });
+      assertNote(seq.notes, 6, 15, '1.4.01', 'g', { pitch: -33 });
+      assertNote(seq.notes, 7, 18, '1.4.49', 'h', { pitch: 0 });
+    });
+
+    testCommand('/a^43bc%21[de%[fg]]h', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { volume: 100 });
+      assertNote(seq.notes, 1, 4, '1.1.49', 'b', { volume: 143 });
+      assertNote(seq.notes, 2, 5, '1.2.01', 'c', { volume: 100 });
+      assertNote(seq.notes, 3, 10, '1.2.49', 'd', { volume: 79 });
+      assertNote(seq.notes, 4, 11, '1.3.01', 'e', { volume: 79 });
+      assertNote(seq.notes, 5, 14, '1.3.49', 'f', { volume: 59 });
+      assertNote(seq.notes, 6, 15, '1.4.01', 'g', { volume: 59 });
+      assertNote(seq.notes, 7, 18, '1.4.49', 'h', { volume: 100 });
+    });
+
+    testCommand('/a{43bc}21[de}[fg]]h', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a', { pan: 0 });
+      assertNote(seq.notes, 1, 4, '1.1.49', 'b', { pan: -43 });
+      assertNote(seq.notes, 2, 5, '1.2.01', 'c', { pan: 0 });
+      assertNote(seq.notes, 3, 10, '1.2.49', 'd', { pan: 21 });
+      assertNote(seq.notes, 4, 11, '1.3.01', 'e', { pan: 21 });
+      assertNote(seq.notes, 5, 14, '1.3.49', 'f', { pan: 46 });
+      assertNote(seq.notes, 6, 15, '1.4.01', 'g', { pan: 46 });
+      assertNote(seq.notes, 7, 18, '1.4.49', 'h', { pan: 0 });
+    });
+
+    testCommand('/a<10bc(>10)[de>[fg]]h', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq.notes, 1, 4, '1.1.39', 'b');
+      assertNote(seq.notes, 2, 5, '1.2.01', 'c');
+      assertNote(seq.notes, 3, 12, '1.2.59', 'd');
+      assertNote(seq.notes, 4, 13, '1.3.11', 'e');
+      assertNote(seq.notes, 5, 16, '1.3.63', 'f');
+      assertNote(seq.notes, 6, 17, '1.4.15', 'g');
+      assertNote(seq.notes, 7, 20, '1.4.49', 'h');
+    });
   });
 });
