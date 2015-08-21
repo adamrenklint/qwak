@@ -1,5 +1,10 @@
 # Changelog
 
+{{#changelog version="0.2.1" date="2015-08-22" from="v0.2.0" to="v0.2.1"}}
+- Fixed issue with bar jump modifier not looping properly for exact half bars
+{{/changelog}}
+
+
 {{#changelog version="0.2" date="2015-08-22" from="v0.1.0" to="v0.2.0"}}
 - Added sample shift modifier: ```~```
 - Added bar jump modifier: ```;```

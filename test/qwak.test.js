@@ -459,6 +459,18 @@ describe('qwak', function () {
       assertNote(seq2.notes, 5, 2, '1.4.01', 'd');
     });
 
+    testCommand('/foxobaxa/asdf;', function (context) {
+      var seq2 = context.sequences[1];
+      assertNote(seq2.notes, 0, 0, '1.1.01', 'a');
+      assertNote(seq2.notes, 1, 1, '1.1.49', 's');
+      assertNote(seq2.notes, 2, 2, '1.2.01', 'd');
+      assertNote(seq2.notes, 3, 3, '1.2.49', 'f');
+      assertNote(seq2.notes, 4, 0, '1.3.01', 'a');
+      assertNote(seq2.notes, 5, 1, '1.3.49', 's');
+      assertNote(seq2.notes, 6, 2, '1.4.01', 'd');
+      assertNote(seq2.notes, 7, 3, '1.4.49', 'f');
+    });
+
     testCommand('/foxobaxafoxobaxa/asdfgh;', function (context) {
       var seq2 = context.sequences[1];
       assertNote(seq2.notes, 0, 0, '1.1.01', 'a');

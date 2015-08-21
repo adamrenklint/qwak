@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.1 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.2.0...v0.2.1)
+
+- Fixed issue with bar jump modifier not looping properly for exact half bars
+
+
 ## v0.2 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.1.0...v0.2.0)
 
 - Added sample shift modifier: ```~```
@@ -13,4 +18,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:28:18 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:41:04 AM*
