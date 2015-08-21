@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.2 (?) [diff](https://github.com/adamrenklint/qwak/compare/v0.1.0...v0.2.0)
+## v0.2 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.1.0...v0.2.0)
 
 - Added sample shift modifier: ```~```
 - Added bar jump modifier: ```;```
@@ -12,4 +12,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:00:49 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:24:41 AM*
