@@ -9,7 +9,7 @@ Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired b
 
 ## Concepts
 
-- A *session* consists of several *sequences*
+- A *session* consists of several layered *sequences*
 - A *sequence* maps to a *kit* by id
 - Steps are 48 ticks, 2/16 beats, by default
 
