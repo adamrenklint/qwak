@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.1 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.0...v0.3.1)
+
+- Fixed issue with jump commands being executed after duplicating half bar sequence
+
 ## v0.3.0 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.2.1...v0.3.0)
 
 - Added reverse transient modifier: ```≈```
@@ -21,4 +25,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 11:01:46 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 8:47:26 PM*

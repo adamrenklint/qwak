@@ -105,4 +105,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 11:01:46 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 8:47:26 PM*

@@ -1,5 +1,9 @@
 # Changelog
 
+{{#changelog version="0.3.1" date="2015-08-22" from="v0.3.0" to="v0.3.1"}}
+- Fixed issue with jump commands being executed after duplicating half bar sequence
+{{/changelog}}
+
 {{#changelog version="0.3.0" date="2015-08-22" from="v0.2.1" to="v0.3.0"}}
 - Added reverse transient modifier: ```≈```
 {{/changelog}}

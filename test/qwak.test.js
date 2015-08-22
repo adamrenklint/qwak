@@ -717,5 +717,13 @@ describe('qwak', function () {
       assertNote(seq.notes, 4, 8, '1.3.01', 'e', { reverse: false });
       assertNote(seq.notes, 5, 10, '1.3.49', 'f', { reverse: false });
     });
+
+    testCommand('/W_*/qiai', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'W');
+      assertNote(seq.notes, 1, 0, '1.2.01', 'W');
+      assertNote(seq.notes, 2, 0, '1.3.01', 'W');
+      assertNote(seq.notes, 3, 0, '1.4.01', 'W');
+    });
   });
 });
