@@ -38,7 +38,7 @@ _       skip step, not blocking "note on" triggers
 ,       start triplet resolution (48 > 32)
 .       stop triplet resolution (32 > 48)
 
-## simple transient modifiers
+## transient modifiers
 +       pitch up next note (1/12th)
 -       pitch down next note
 %       lower volume 20% for next note
@@ -52,7 +52,7 @@ _       skip step, not blocking "note on" triggers
 `       fade out next note release in 0.1 seconds
 ≈       reverse next note or group
 
-## granular transient modifiers
+## transient modifier parameters
 +52     pitch up next note (52/100th)
 -18     pitch down next note (18/100th)
 %33     lower volume 33% for next note
