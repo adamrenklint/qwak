@@ -57,6 +57,7 @@ _       skip step, not blocking "note on" triggers
 ~       shift sample starting point 0.1 seconds
 '       fade in next note attack in 0.1 seconds
 `       fade out next note release in 0.1 seconds
+≈       reverse next note or group
 
 ## granular transient modifiers
 +52     pitch up next note (52/100th)
@@ -104,4 +105,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 8:29:37 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 11:01:46 AM*

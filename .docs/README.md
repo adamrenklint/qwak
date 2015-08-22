@@ -50,6 +50,7 @@ _       skip step, not blocking "note on" triggers
 ~       shift sample starting point 0.1 seconds
 '       fade in next note attack in 0.1 seconds
 `       fade out next note release in 0.1 seconds
+≈       reverse next note or group
 
 ## granular transient modifiers
 +52     pitch up next note (52/100th)

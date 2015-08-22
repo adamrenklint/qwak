@@ -1,9 +1,12 @@
 # Changelog
 
+## v0.3.0 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.2.1...v0.3.0)
+
+- Added reverse transient modifier: ```≈```
+
 ## v0.2.1 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.2.0...v0.2.1)
 
 - Fixed issue with bar jump modifier not looping properly for exact half bars
-
 
 ## v0.2 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.1.0...v0.2.0)
 
@@ -18,4 +21,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 8:29:37 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 11:01:46 AM*

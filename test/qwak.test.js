@@ -707,5 +707,15 @@ describe('qwak', function () {
       assertNote(seq.notes, 2, 8, '1.2.01', 'c', { release: 0.35 });
       assertNote(seq.notes, 3, 10, '1.2.49', 'd');
     });
+
+    testCommand('/≈ab≈[cd≈e]f', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 1, '1.1.01', 'a', { reverse: true });
+      assertNote(seq.notes, 1, 2, '1.1.49', 'b', { reverse: false });
+      assertNote(seq.notes, 2, 5, '1.2.01', 'c', { reverse: true });
+      assertNote(seq.notes, 3, 6, '1.2.49', 'd', { reverse: true });
+      assertNote(seq.notes, 4, 8, '1.3.01', 'e', { reverse: false });
+      assertNote(seq.notes, 5, 10, '1.3.49', 'f', { reverse: false });
+    });
   });
 });
