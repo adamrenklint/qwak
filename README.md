@@ -48,12 +48,12 @@ _       skip step, not blocking "note on" triggers
 ## simple transient modifiers
 +       pitch up next note (1/12th)
 -       pitch down next note
-%       lower volume 25% for next note
-^       raise volume 25% for next note
+%       lower volume 20% for next note
+^       raise volume 20% for next note
 {       pan next note to 25% left
 }       pan next note to 25% right
-<       pull next note cursor 1/12th step (4 of 48) back
->       push next note cursor forward
+<       pull next note cursor 1/12th step back
+>       push next note cursor 1/12th step forward
 ~       shift sample starting point 0.1 seconds
 '       fade in next note attack in 0.1 seconds
 `       fade out next note release in 0.1 seconds
@@ -104,4 +104,4 @@ For more examples, have a look at the [extensive test suite](https://github.com/
 [MIT](https://github.com/adamrenklint/qwak/blob/master/LICENSE.md) © 2015 [Adam Renklint](http://adamrenklint.com)
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 12:41:04 AM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 8:29:37 AM*
