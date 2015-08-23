@@ -739,5 +739,12 @@ describe('qwak', function () {
       assertNote(seq.notes, 2, 0, '1.3.01', 'W', { duration: 96 });
       assertNote(seq.notes, 3, 0, '1.4.01', 'W', { duration: 96 });
     });
+
+    testCommand("/80/q_<a_q(_>q)<a_q_<a(_>q)q>q&%%%%ha_", function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 9, 25, '2.3.53', 'q', { size: 0.9166666666666666 });
+      assertNote(seq.notes, 10, 31, '2.3.53', 'h', { size: 0.9166666666666666 });
+      assertNote(seq.notes, 11, 32, '2.4.01', 'a', { size: 1 });
+    });
   });
 });

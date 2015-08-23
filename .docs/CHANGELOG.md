@@ -1,5 +1,9 @@
 # Changelog
 
+{{#changelog version="0.3.3" date="2015-08-23" from="v0.3.2" to="v0.3.3"}}
+- Fixed issue with step layer symbol leaking offset to following notes
+{{/changelog}}
+
 {{#changelog version="0.3.2" date="2015-08-23" from="v0.3.1" to="v0.3.2"}}
 - Fixed issue with jump commands giving the wrong duration to duplicated notes
 {{/changelog}}
