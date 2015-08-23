@@ -1,5 +1,9 @@
 # Changelog
 
+{{#changelog version="0.3.2" date="2015-08-23" from="v0.3.1" to="v0.3.2"}}
+- Fixed issue with jump commands giving the wrong duration to duplicated notes
+{{/changelog}}
+
 {{#changelog version="0.3.1" date="2015-08-22" from="v0.3.0" to="v0.3.1"}}
 - Fixed issue with jump commands being executed after duplicating half bar sequence
 {{/changelog}}

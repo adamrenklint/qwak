@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.2 (2015-08-23) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.1...v0.3.2)
+
+- Fixed issue with jump commands giving the wrong duration to duplicated notes
+
 ## v0.3.1 (2015-08-22) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.0...v0.3.1)
 
 - Fixed issue with jump commands being executed after duplicating half bar sequence
@@ -25,4 +29,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday August 22nd, 2015 - 8:48:02 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Sunday August 23rd, 2015 - 2:58:18 PM*
