@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.4 (2015-08-26) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.3...v0.3.4)
+
+- Fixed issue with wrong duration being calculated for layered notes
+- Fixed issue with wrong duration being calculated for trailing spacer note followed a jump command
+
 ## v0.3.3 (2015-08-23) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.2...v0.3.3)
 
 - Fixed issue with step layer symbol leaking offset to following notes
@@ -33,4 +38,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Sunday August 23rd, 2015 - 6:48:36 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Wednesday August 26th, 2015 - 11:23:28 PM*
