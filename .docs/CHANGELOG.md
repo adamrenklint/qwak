@@ -1,5 +1,10 @@
 # Changelog
 
+{{#changelog version="0.3.4" date="2015-08-26" from="v0.3.3" to="v0.3.4"}}
+- Fixed issue with wrong duration being calculated for layered notes
+- Fixed issue with wrong duration being calculated for trailing spacer note followed a jump command
+{{/changelog}}
+
 {{#changelog version="0.3.3" date="2015-08-23" from="v0.3.2" to="v0.3.3"}}
 - Fixed issue with step layer symbol leaking offset to following notes
 {{/changelog}}

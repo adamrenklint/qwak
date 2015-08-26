@@ -746,5 +746,34 @@ describe('qwak', function () {
       assertNote(seq.notes, 10, 31, '2.3.53', 'h', { size: 0.9166666666666666 });
       assertNote(seq.notes, 11, 32, '2.4.01', 'a', { size: 1 });
     });
+
+    testCommand('/56/3=_Q_E/1=,i%%i%iO%%i%ii(%%I%O)%iO%%i%i*/1=(,W__W_%%%WA___%%%W%%WW__A_WA___*/4=', function (context) {
+      var seq = context.sequences[2];
+      it('should be the correct length', function () {
+        expect(context.bars).to.equal(1);
+      });
+      it('should create the correct amount of notes', function () {
+        expect(seq.notes.length).to.equal(11);
+      });
+      assertNote(seq.notes, 0, 2, '1.1.01', 'W', { duration: 48 });
+      assertNote(seq.notes, 1, 5, '1.1.49', 'W', { duration: 32 });
+      assertNote(seq.notes, 2, 10, '1.1.81', 'W', { duration: 16, volume: 40 });
+      assertNote(seq.notes, 3, 11, '1.2.01', 'A', { duration: 64 });
+      assertNote(seq.notes, 4, 18, '1.2.65', 'W', { duration: 16, volume: 40 });
+      assertNote(seq.notes, 5, 21, '1.2.81', 'W', { duration: 16, volume: 60 });
+      assertNote(seq.notes, 6, 22, '1.3.01', 'W', { duration: 48 });
+      assertNote(seq.notes, 7, 25, '1.3.49', 'A', { duration: 32 });
+      assertNote(seq.notes, 8, 27, '1.3.81', 'W', { duration: 16 });
+      assertNote(seq.notes, 9, 28, '1.4.01', 'A', { duration: 64 });
+      assertNote(seq.notes, 10, 2, '1.4.65', 'W', { duration: 32 });
+    });
+
+    testCommand('/Q&S', function (context) {
+      var seq = context.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'Q', { duration: 192 });
+      assertNote(seq.notes, 1, 2, '1.1.01', 'S', { duration: 192 });
+      assertNote(seq.notes, 2, 0, '1.3.01', 'Q', { duration: 192 });
+      assertNote(seq.notes, 3, 2, '1.3.01', 'S', { duration: 192 });
+    });
   });
 });
