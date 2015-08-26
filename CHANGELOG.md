@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.5 (2015-08-27) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.4...v0.3.5)
+
+- Fixed issue with trailing zero-duration notes being added because of a rounding error
+
 ## v0.3.4 (2015-08-26) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.3...v0.3.4)
 
 - Fixed issue with wrong duration being calculated for layered notes
@@ -38,4 +42,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Wednesday August 26th, 2015 - 11:23:28 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Thursday August 27th, 2015 - 12:07:24 AM*

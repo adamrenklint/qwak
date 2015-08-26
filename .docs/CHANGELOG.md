@@ -1,5 +1,9 @@
 # Changelog
 
+{{#changelog version="0.3.5" date="2015-08-27" from="v0.3.4" to="v0.3.5"}}
+- Fixed issue with trailing zero-duration notes being added because of a rounding error
+{{/changelog}}
+
 {{#changelog version="0.3.4" date="2015-08-26" from="v0.3.3" to="v0.3.4"}}
 - Fixed issue with wrong duration being calculated for layered notes
 - Fixed issue with wrong duration being calculated for trailing spacer note followed a jump command

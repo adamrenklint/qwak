@@ -775,5 +775,27 @@ describe('qwak', function () {
       assertNote(seq.notes, 2, 0, '1.3.01', 'Q', { duration: 192 });
       assertNote(seq.notes, 3, 2, '1.3.01', 'S', { duration: 192 });
     });
+
+    testCommand('/,Q&S_*', function (context) {
+      var seq = context.sequences[0];
+      it('should be the correct length', function () {
+        expect(context.bars).to.equal(1);
+      });
+      it('should create the correct amount of notes', function () {
+        expect(seq.notes.length).to.equal(12);
+      });
+      assertNote(seq.notes, 0, 1, '1.1.01', 'Q', { duration: 64 });
+      assertNote(seq.notes, 1, 3, '1.1.01', 'S', { duration: 64 });
+      assertNote(seq.notes, 2, 1, '1.1.65', 'Q', { duration: 64 });
+      assertNote(seq.notes, 3, 3, '1.1.65', 'S', { duration: 64 });
+      assertNote(seq.notes, 4, 1, '1.2.33', 'Q', { duration: 64 });
+      assertNote(seq.notes, 5, 3, '1.2.33', 'S', { duration: 64 });
+      assertNote(seq.notes, 6, 1, '1.3.01', 'Q', { duration: 64 });
+      assertNote(seq.notes, 7, 3, '1.3.01', 'S', { duration: 64 });
+      assertNote(seq.notes, 8, 1, '1.3.65', 'Q', { duration: 64 });
+      assertNote(seq.notes, 9, 3, '1.3.65', 'S', { duration: 64 });
+      assertNote(seq.notes, 10, 1, '1.4.33', 'Q', { duration: 64 });
+      assertNote(seq.notes, 11, 3, '1.4.33', 'S', { duration: 64 });
+    });
   });
 });
