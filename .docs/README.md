@@ -9,9 +9,10 @@ Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired b
 
 ## Concepts
 
-- A *session* consists of several layered *sequences*
-- A *sequence* maps to a *kit* by id
-- Steps are 48 ticks, 2/16 beats, by default
+- Timing is step based, where a default step is two 1/16th beats, i.e. 48 ticks
+- A *pattern* consists of several layered *sequences*
+- A *sequence* maps to a *kit* by id and contains an array of *notes*
+- A *note* contains instructions for how to play back a sample
 
 ## Syntax
 
@@ -51,6 +52,7 @@ _       skip step, not blocking "note on" triggers
 '       fade in next note attack in 0.1 seconds
 `       fade out next note release in 0.1 seconds
 ≈       reverse next note or group
+∞       loop the first 0.1 seconds of sample
 
 ## transient modifier parameters
 +52     pitch up next note (52/100th)
@@ -64,6 +66,8 @@ _       skip step, not blocking "note on" triggers
 ~350    shift sample starting point 0.35 seconds
 '250    fade in next note attack in 0.25 seconds
 `800    fade out next note release in 0.8 seconds
+∞250    loop the first 0.25 seconds of sample
+§333    set next note sample maxlength to 0.333 seconds
 ```
 
 ## Install
@@ -76,12 +80,12 @@ $ npm install --save qwak
 
 ```
 var qwak = require('qwak');
-var context = qwak.parse('/qwak');
+var pattern = qwak.parse('/qwak');
 ```
 
-### qwak.parse(raw:string) -> context
+### qwak.parse(raw:string) -> pattern
 
-Parses a raw qwak string into a qwak context, an object with the attributes *tempo:number*, *bars:number* and *sequences:array*. Each sequence contains *kit:number*, *bars:number* and *notes:array*. A note contains *key:string*, *oneshot:boolean*, *pitch:number*, *volume:number*, *pan:number* and *offset:number*.
+Parses a raw qwak string into a qwak pattern, an object with the attributes *tempo:number*, *bars:number* and *sequences:array*. Each sequence contains *kit:number*, *bars:number* and *notes:array*. A note contains *key:string*, *oneshot:boolean*, *pitch:number*, *volume:number*, *pan:number* and *offset:number*.
 
 ## Examples
 
