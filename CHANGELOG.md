@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.4.1 (2015-08-30) [diff](https://github.com/adamrenklint/qwak/compare/v0.4.0...v0.4.1)
+
+- Fixed value format for maxlength instruction, now uses seconds
+
+## v0.4.0 (2015-08-30) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.5...v0.4.0)
+
+- Added ```∞``` sample loop symbol
+- Added ```§``` sample maxlength symbol
+
 ## v0.3.5 (2015-08-27) [diff](https://github.com/adamrenklint/qwak/compare/v0.3.4...v0.3.5)
 
 - Fixed issue with trailing zero-duration notes being added because of a rounding error
@@ -42,4 +51,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Sunday August 30th, 2015 - 4:17:05 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Sunday August 30th, 2015 - 11:50:19 PM*

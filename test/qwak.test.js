@@ -800,7 +800,7 @@ describe('qwak', function () {
     testCommand('/q§500sad', function (pattern) {
       var seq = pattern.sequences[0];
       assertNote(seq.notes, 0, 0, '1.1.01', 'q', { oneshot: true });
-      assertNote(seq.notes, 1, 5, '1.1.49', 's', { oneshot: false, maxlength: 500 });
+      assertNote(seq.notes, 1, 5, '1.1.49', 's', { oneshot: false, maxlength: 0.5 });
       assertNote(seq.notes, 2, 6, '1.2.01', 'a', { oneshot: true });
       assertNote(seq.notes, 3, 7, '1.2.49', 'd', { oneshot: true });
     });
@@ -808,23 +808,23 @@ describe('qwak', function () {
     testCommand('/q§500[sa]d', function (pattern) {
       var seq = pattern.sequences[0];
       assertNote(seq.notes, 0, 0, '1.1.01', 'q', { oneshot: true });
-      assertNote(seq.notes, 1, 6, '1.1.49', 's', { oneshot: false, maxlength: 500 });
-      assertNote(seq.notes, 2, 7, '1.2.01', 'a', { oneshot: false, maxlength: 500 });
+      assertNote(seq.notes, 1, 6, '1.1.49', 's', { oneshot: false, maxlength: 0.5 });
+      assertNote(seq.notes, 2, 7, '1.2.01', 'a', { oneshot: false, maxlength: 0.5 });
       assertNote(seq.notes, 3, 9, '1.2.49', 'd', { oneshot: true });
     });
 
     testCommand('/q§500[s§250a]d', function (pattern) {
       var seq = pattern.sequences[0];
       assertNote(seq.notes, 0, 0, '1.1.01', 'q', { oneshot: true });
-      assertNote(seq.notes, 1, 6, '1.1.49', 's', { oneshot: false, maxlength: 500 });
-      assertNote(seq.notes, 2, 11, '1.2.01', 'a', { oneshot: false, maxlength: 250 });
+      assertNote(seq.notes, 1, 6, '1.1.49', 's', { oneshot: false, maxlength: 0.5 });
+      assertNote(seq.notes, 2, 11, '1.2.01', 'a', { oneshot: false, maxlength: 0.25 });
       assertNote(seq.notes, 3, 13, '1.2.49', 'd', { oneshot: true });
     });
 
     testCommand('/q§1000SAd', function (pattern) {
       var seq = pattern.sequences[0];
       assertNote(seq.notes, 0, 0, '1.1.01', 'q', { oneshot: true });
-      assertNote(seq.notes, 1, 6, '1.1.49', 'S', { oneshot: false, maxlength: 1000, duration: 0 });
+      assertNote(seq.notes, 1, 6, '1.1.49', 'S', { oneshot: false, maxlength: 1, duration: 0 });
       assertNote(seq.notes, 2, 7, '1.2.01', 'A', { oneshot: false, duration: 48 });
       assertNote(seq.notes, 3, 8, '1.2.49', 'd', { oneshot: true });
     });

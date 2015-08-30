@@ -1,5 +1,14 @@
 # Changelog
 
+{{#changelog version="0.4.1" date="2015-08-30" from="v0.4.0" to="v0.4.1"}}
+- Fixed value format for maxlength instruction, now uses seconds
+{{/changelog}}
+
+{{#changelog version="0.4.0" date="2015-08-30" from="v0.3.5" to="v0.4.0"}}
+- Added ```∞``` sample loop symbol
+- Added ```§``` sample maxlength symbol
+{{/changelog}}
+
 {{#changelog version="0.3.5" date="2015-08-27" from="v0.3.4" to="v0.3.5"}}
 - Fixed issue with trailing zero-duration notes being added because of a rounding error
 {{/changelog}}
