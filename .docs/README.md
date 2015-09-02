@@ -7,6 +7,8 @@
 
 Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired by [Typedrummer](http://typedrummer.com/) by [Kyle Stetz](http://kylestetz.com/).
 
+Used in [trn.gl](http://www.trn.gl/b1w4)
+
 ## Concepts
 
 - Timing is step based, where a default step is two 1/16th beats, i.e. 48 ticks
@@ -95,7 +97,7 @@ Parses a raw qwak string into a qwak pattern, an object with the attributes *tem
 /90/2=foxobaxa  Use kit 2 at 90 bpm
 ```
 
-For more examples, have a look at the [extensive test suite]({{github.url}}/blob/master/test/qwak.test.js)
+For more examples, have a look at the [extensive test suite]({{github.url}}/blob/master/test/qwak.test.js) or  [see it in action](http://www.trn.gl/b1w4)
 
 ## License
 
