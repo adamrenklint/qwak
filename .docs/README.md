@@ -7,7 +7,7 @@
 
 Made by [Adam Renklint](http://adamrenklint.com), Berlin august 2015. Inspired by [Typedrummer](http://typedrummer.com/) by [Kyle Stetz](http://kylestetz.com/).
 
-Used in [trn.gl](http://www.trn.gl/b1w4)
+Used in [trn.gl](http://www.trn.gl/b1w4), a text-based step sequencer for modern browsers.
 
 ## Concepts
 
