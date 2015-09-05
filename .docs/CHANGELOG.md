@@ -1,5 +1,9 @@
 # Changelog
 
+{{#changelog version="0.5.0" date="2015-09-05" from="v0.4.1" to="v0.5.0"}}
+- Added ```∆``` bitcrush effect symbol
+{{/changelog}}
+
 {{#changelog version="0.4.1" date="2015-08-30" from="v0.4.0" to="v0.4.1"}}
 - Fixed value format for maxlength instruction, now uses seconds
 {{/changelog}}

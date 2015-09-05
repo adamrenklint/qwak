@@ -51,8 +51,8 @@ _       skip step, not blocking "note on" triggers
 ~       shift sample starting point 0.1 seconds
 '       fade in next note attack in 0.1 seconds
 `       fade out next note release in 0.1 seconds
-≈       reverse next note or group
-∞       loop the first 0.1 seconds of sample
+≈       reverse next note or group (alt + x)
+∞       loop the first 0.1 seconds of sample (alt + 5)
 
 ## transient modifier parameters
 +52     pitch up next note (52/100th of octave)
@@ -67,7 +67,11 @@ _       skip step, not blocking "note on" triggers
 '250    fade in next note attack in 0.25 seconds
 `800    fade out next note release in 0.8 seconds
 ∞250    loop the first 0.25 seconds of sample
-§333    set next note sample maxlength to 0.333 seconds
+§333    set next note sample maxlength to 0.333 seconds (alt + 6)
+
+## effect modifiers
+∆         bitcrush to 12 bits (alt + j)
+∆8|30|40  bitcrush to 8 bits, at frequency 30/100, mix 40%
 ```
 
 ## Install

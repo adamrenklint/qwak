@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.0 (2015-09-05) [diff](https://github.com/adamrenklint/qwak/compare/v0.4.1...v0.5.0)
+
+- Added ```∆``` bitcrush effect symbol
+
 ## v0.4.1 (2015-08-30) [diff](https://github.com/adamrenklint/qwak/compare/v0.4.0...v0.4.1)
 
 - Fixed value format for maxlength instruction, now uses seconds
@@ -51,4 +55,4 @@
 - Initial public release
 
 ---
-*Generated with [redok](https://github.com/adamrenklint/redok) @ Sunday August 30th, 2015 - 11:50:19 PM*
+*Generated with [redok](https://github.com/adamrenklint/redok) @ Saturday September 5th, 2015 - 7:49:03 PM*
