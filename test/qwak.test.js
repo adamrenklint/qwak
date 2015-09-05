@@ -860,5 +860,54 @@ describe('qwak', function () {
       assertNote(seq.notes, 2, 8, '1.2.01', 's', { loop: 0.1 });
       assertNote(seq.notes, 3, 10, '1.2.49', 'd', { loop: 0 });
     });
+
+    testCommand('/f∆oo', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 2, '1.1.49', 'o', { bitcrush: 12, bitcrushFreq: 0, bitcrushMix: 0 });
+      assertNote(seq.notes, 2, 3, '1.2.01', 'o', { bitcrush: 0 });
+    });
+
+    testCommand('/f∆10oo', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 4, '1.1.49', 'o', { bitcrush: 10, bitcrushFreq: 0, bitcrushMix: 0 });
+      assertNote(seq.notes, 2, 5, '1.2.01', 'o', { bitcrush: 0 });
+    });
+
+    testCommand('/f∆8|40|80oo', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 9, '1.1.49', 'o', { bitcrush: 8, bitcrushFreq: 40, bitcrushMix: 80 });
+      assertNote(seq.notes, 2, 10, '1.2.01', 'o', { bitcrush: 0 });
+    });
+
+    testCommand('/f∆8||80oo', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 7, '1.1.49', 'o', { bitcrush: 8, bitcrushFreq: 0, bitcrushMix: 80 });
+      assertNote(seq.notes, 2, 8, '1.2.01', 'o', { bitcrush: 0 });
+    });
+
+    testCommand('/f∆|40|80oo', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 8, '1.1.49', 'o', { bitcrush: 12, bitcrushFreq: 40, bitcrushMix: 80 });
+      assertNote(seq.notes, 2, 9, '1.2.01', 'o', { bitcrush: 0 });
+    });
+
+    testCommand('/f∆8|40|80[oo]', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 10, '1.1.49', 'o', { bitcrush: 8, bitcrushFreq: 40, bitcrushMix: 80 });
+      assertNote(seq.notes, 2, 11, '1.2.01', 'o', { bitcrush: 8, bitcrushFreq: 40, bitcrushMix: 80 });
+    });
+
+    testCommand('/f∆8|40|80[o∆o]', function (pattern) {
+      var seq = pattern.sequences[0];
+      assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
+      assertNote(seq.notes, 1, 10, '1.1.49', 'o', { bitcrush: 8, bitcrushFreq: 40, bitcrushMix: 80 });
+      assertNote(seq.notes, 2, 12, '1.2.01', 'o', { bitcrush: 12, bitcrushFreq: 0, bitcrushMix: 0 });
+    });
   });
 });

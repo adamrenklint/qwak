@@ -40,7 +40,7 @@ _       skip step, not blocking "note on" triggers
 .       stop triplet resolution (32 > 48)
 
 ## transient modifiers
-+       pitch up next note (1/12th)
++       pitch up next note (1/12th of octave)
 -       pitch down next note
 %       lower volume 20% for next note
 ^       raise volume 20% for next note
@@ -55,7 +55,7 @@ _       skip step, not blocking "note on" triggers
 ∞       loop the first 0.1 seconds of sample
 
 ## transient modifier parameters
-+52     pitch up next note (52/100th)
++52     pitch up next note (52/100th of octave)
 -18     pitch down next note (18/100th)
 %33     lower volume 33% for next note
 ^10     raise volume 10% for next note
