@@ -12,7 +12,7 @@ describe('qwak', function () {
       });
     }
 
-    function assertNote(notes, index, charIndex, position, key, assertions) {
+    function assertNote(notes, index, charIndex, position, key, assertions, callback) {
       describe('when parsing "' + key + '" at index ' + charIndex, function () {
         var note = notes[index];
         it('should add the note with correct key: ' + key, function () {
@@ -24,12 +24,16 @@ describe('qwak', function () {
         it('should assign the note the correct index: ' + charIndex, function () {
           expect(note.index).to.equal(charIndex);
         });
+        if (typeof assertions === 'function') {
+          callback = assertions;
+        }
         assertions = assertions || {};
         Object.keys(assertions).forEach(function (key) {
           it('should set "' + key + '" to "' + assertions[key] + '"', function () {
             expect(note[key]).to.equal(assertions[key]);
           });
         });
+        callback && callback();
       });
     }
 
@@ -908,6 +912,70 @@ describe('qwak', function () {
       assertNote(seq.notes, 0, 0, '1.1.01', 'f', { bitcrush: 0 });
       assertNote(seq.notes, 1, 10, '1.1.49', 'o', { bitcrush: 8, bitcrushFreq: 40, bitcrushMix: 80 });
       assertNote(seq.notes, 2, 12, '1.2.01', 'o', { bitcrush: 12, bitcrushFreq: 0, bitcrushMix: 0 });
+    });
+
+    function assertEffects(notes, renderIndex, realIndex, position, key, effects = []) {
+      assertNote(notes, renderIndex, realIndex, position, key, function () {
+        it('should add the correct number of effects', function () {
+          expect(notes[renderIndex].effects.length).to.equal(effects.length);
+        });
+        effects.forEach((effect, index) => {
+          it(`should add "${effect.type}" effect at index ${index}`, function () {
+            expect(JSON.stringify(notes[renderIndex].effects[index])).to.equal(JSON.stringify(effect));
+          });
+        });
+      });
+    }
+
+    testCommand('/g®[ai®5|70|2|5|||1|1a]', function (pattern) {
+      const seq = pattern.sequences[0];
+      const defaultReverb = { type: 'reverb' };
+      const customReverb = { type: 'reverb', wet: 5, dry: 70, time: 2, decay: 5, reverse: true, bypass: true };
+      assertEffects(seq.notes, 0, 0, '1.1.01', 'g');
+      assertEffects(seq.notes, 1, 3, '1.1.49', 'a', [defaultReverb]);
+      assertEffects(seq.notes, 2, 4, '1.2.01', 'i', [defaultReverb]);
+      assertEffects(seq.notes, 3, 20, '1.2.49', 'a', [defaultReverb, customReverb]);
+    });
+
+    testCommand('/g®[ai®5|70|||2a]', function (pattern) {
+      const seq = pattern.sequences[0];
+      const defaultReverb = { type: 'reverb' };
+      const customReverb = { type: 'reverb', wet: 5, dry: 70, filter: 'lowpass' };
+      assertEffects(seq.notes, 0, 0, '1.1.01', 'g');
+      assertEffects(seq.notes, 1, 3, '1.1.49', 'a', [defaultReverb]);
+      assertEffects(seq.notes, 2, 4, '1.2.01', 'i', [defaultReverb]);
+      assertEffects(seq.notes, 3, 14, '1.2.49', 'a', [defaultReverb, customReverb]);
+    });
+
+    testCommand('/g¿ai¿a', function (pattern) {
+      const seq = pattern.sequences[0];
+      const defaultDelay = { type: 'delay' };
+      assertEffects(seq.notes, 0, 0, '1.1.01', 'g');
+      assertEffects(seq.notes, 1, 2, '1.1.49', 'a', [defaultDelay]);
+      assertEffects(seq.notes, 2, 3, '1.2.01', 'i');
+      assertEffects(seq.notes, 3, 5, '1.2.49', 'a', [defaultDelay]);
+    });
+
+    testCommand('/,go¿10|40|0|0.25||6|5000[a.i¿a]', function (pattern) {
+      const seq = pattern.sequences[0];
+      const defaultDelay = { type: 'delay' };
+      const detailedDelay = { type: 'delay', wet: 10, dry: 40, sync: false, time: 0.25, filter: 'peaking', cutoff: 5000 };
+      assertEffects(seq.notes, 0, 1, '1.1.01', 'g');
+      assertEffects(seq.notes, 1, 2, '1.1.33', 'o');
+      assertEffects(seq.notes, 2, 25, '1.1.65', 'a', [detailedDelay]);
+      assertEffects(seq.notes, 3, 27, '1.2.01', 'i', [detailedDelay]);
+      assertEffects(seq.notes, 4, 29, '1.2.49', 'a', [detailedDelay, defaultDelay]);
+    });
+
+    testCommand('/gΩ[aiΩ-50|10|12--a]', function (pattern) {
+      const seq = pattern.sequences[0];
+      const defaultCompressor = { type: 'compressor' };
+      const customCompressor = { type: 'compressor', threshold: -50, knee: 10, ratio: 12 };
+      assertEffects(seq.notes, 0, 0, '1.1.01', 'g');
+      assertEffects(seq.notes, 1, 3, '1.1.49', 'a', [defaultCompressor]);
+      assertEffects(seq.notes, 2, 4, '1.2.01', 'i', [defaultCompressor]);
+      assertEffects(seq.notes, 3, 17, '1.2.49', 'a', [defaultCompressor, customCompressor]);
+      assertNote(seq.notes, 3, 17, '1.2.49', 'a', { pitch: -24 });
     });
   });
 });
