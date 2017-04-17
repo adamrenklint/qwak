@@ -1,6 +1,8 @@
 qwak
 ====
 
+[![Join the chat at https://gitter.im/adamrenklint/qwak](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adamrenklint/qwak?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Definition and parser for qwak, a simple and expressive minimal ascii dialect for programming step-based web audio event sequences
 
 [![Join the chat at https://gitter.im/adamrenklint/qwak](https://img.shields.io/badge/GITTER-join_chat-blue.svg?style=flat-square)](https://gitter.im/adamrenklint/qwak)
